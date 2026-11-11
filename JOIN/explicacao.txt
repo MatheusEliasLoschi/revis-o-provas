@@ -1,0 +1,22 @@
+SELECT Clientes.Nome, Pedidos.Produto
+FROM Clientes
+JOIN Pedidos ON Clientes.ID = Pedidos.ID_do_Cliente;
+Traduzindo o código para o português:
+
+SELECT: Me mostre o Nome e o Produto.
+
+FROM Clientes: Comece olhando a tabela de Clientes.
+
+JOIN Pedidos: Cole a tabela de Pedidos ao lado dela...
+
+ON ...: ...ONDE a coluna ID da tabela Clientes seja igual à coluna ID_do_Cliente da tabela Pedidos.
+
+==================================================================================================================
+
+Se o código for FROM Clientes LEFT JOIN Produtos:
+
+Todos os clientes vão aparecer na tela (mesmo os que nunca compraram nada, como o Carlos).
+
+Os produtos relacionados a esses clientes vão aparecer ao lado do nome deles.
+
+Um produto que está lá no estoque (ou num pedido perdido) e não está relacionado a nenhum cliente simplesmente não aparece no seu relatório.
